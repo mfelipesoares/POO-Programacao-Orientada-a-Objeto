@@ -1,0 +1,85 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>70</x><y>130</y><w>380</w><h>290</h></coordinates><panel_attributes>/LabClasseInterface::Professor/
+&lt;&lt;Abstract&gt;&gt;
+--
+-nome: String
+-nTurmas: int
+-salario: double
+--
++Professor(String nome, int nTurmas, double salario): ctor
++elaborarProvas(): Prova[]
++corrigirProva(Prova prova): double
++getNome(): String
++setNome(String nome): void
++getnTurmas(): int
++setnTurmas(int nTurmas): void
++getSalario(): double
+-setSalario(double salario): void
++estudar(): void
++receberSalario(int nTurmas): void
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>60</x><y>530</y><w>260</w><h>230</h></coordinates><panel_attributes>LabClasseInterface::Prova
+--
+-questoes: String[]
+-respostas: String[]
+-nota = 0: double
+--
++Prova(String[] questoes): ctor
++getQuestoes(): String[]
++setRespostas(String[] respostas): void
++getRespostas(): String[]
++setQuestoes(String[] questoes): void
++getNota(): double
++setNota(double nota): void
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>140</y><w>270</w><h>210</h></coordinates><panel_attributes>LabClasseInterface::Aluno
+--
+-nome: String
+-nMatricula: int
+--
++Aluno(String nome, int nMatricula): ctor
++fazerProva(Prova prova): void
++getNome(): String
++setNome(String nome): void
++getnMatricula(): int
++setnMatricula(int nMatricula): void
++estudar(): void
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>20</y><w>210</w><h>90</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+LabClasseInterface::Estudante
+--
+--
++estudar(): void
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>0</y><w>290</w><h>90</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+LabClasseInterface::FuncionarioAssalariado
+--
+--
+~receberSalario(int nTurmas): void
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>430</y><w>500</w><h>90</h></coordinates><panel_attributes>LabClasseInterface::ProfessorDaEducacaoBasica
+--
+--
++ProfessorDaEducacaoBasica(String nome, int nTurmas, double salario): ctor
++elaborarProvas(): Prova[]
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>560</x><y>440</y><w>470</w><h>90</h></coordinates><panel_attributes>LabClasseInterface::ProfessorUniversitario
+--
+--
++ProfessorUniversitario(String nome, int nTurmas, double salario): ctor
++elaborarProvas(): Prova[]
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>660</y><w>230</w><h>70</h></coordinates><panel_attributes>LabClasseInterface::TestaSolucao
+--
+--
++main(String[] args): void
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>740</x><y>60</y><w>140</w><h>100</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;120;10;120;80</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>80</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>360</y><w>290</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;270;10;270;80</additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>510</y><w>180</w><h>170</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;10;10;90;160;90;160;150</additional_attributes></element><element><id>Relation</id><coordinates><x>670</x><y>520</y><w>30</w><h>160</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>300</y><w>350</w><h>410</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>280;10;330;10;330;390;10;390</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>680</y><w>200</w><h>40</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;20;180;20</additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>50</y><w>150</w><h>100</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>130;10;10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>520</y><w>620</w><h>130</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;110;600;110;600;10</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>510</y><w>30</w><h>40</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;10;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>980</x><y>240</y><w>100</w><h>40</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;20;80;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1050</x><y>250</y><w>30</w><h>520</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;10;10;500</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>730</y><w>770</w><h>40</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;20;750;20</additional_attributes></element></diagram>
